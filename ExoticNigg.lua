@@ -87,7 +87,7 @@ end)
 -- Show initial notification
 game.StarterGui:SetCore("SendNotification", {
     Title = "⭐ The best dh lock by ExoticCrew ⭐",
-    Text = "Script only for exotics uwu",
+    Text = "Script only for exotics uwu | V1.2",
 })
 
 -- Variables
