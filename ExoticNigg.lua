@@ -87,7 +87,7 @@ end)
 -- Show initial notification
 game.StarterGui:SetCore("SendNotification", {
     Title = "⭐ The best dh lock by ExoticCrew ⭐",
-    Text = "Enjoy the improved lock script!",
+    Text = "Script only for exotics uwu",
 })
 
 -- Variables
@@ -189,8 +189,8 @@ end)
 
 if settings.valiansh then
     game.StarterGui:SetCore("SendNotification", {
-        Title = "ugliest lock",
-        Text = "already loaded",
+        Title = "[⭐] Exotic Lock",
+        Text = "Already loaded...",
         Duration = 5,
     })
     return
@@ -214,7 +214,7 @@ UserInputService.InputBegan:Connect(function(keygo, ok)
 
                     if settings.NotifMode then
                         game.StarterGui:SetCore("SendNotification", {
-                            Title = "ugliest lock",
+                            Title = "️[✔️] User locked",
                             Text = "Target: " .. Plr.Name,
                         })
                     end
@@ -226,7 +226,7 @@ UserInputService.InputBegan:Connect(function(keygo, ok)
 
                 if settings.NotifMode then
                     game.StarterGui:SetCore("SendNotification", {
-                        Title = "ugliest lock",
+                        Title = "[⭐] Exotic Lock",
                         Text = "Unlocked!",
                     })
                 end
