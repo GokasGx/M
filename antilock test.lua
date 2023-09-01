@@ -3,6 +3,14 @@ local KeyCode = Enum.KeyCode.Z
 local hipHeight = 2.8
 local antiLockOffset = -35
 
+local function Notify(message)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Anti-Lock",
+        Text = message,
+        Duration = 3,
+    })
+end
+
 function AntiLock()
     local character = game.Players.LocalPlayer.Character
     if not character or not character:FindFirstChild("HumanoidRootPart") or not character:FindFirstChild("Humanoid") then
@@ -32,6 +40,9 @@ game:GetService('UserInputService').InputBegan:Connect(function(input, gameProce
 
         if Toggled then
             AntiLock()
+            Notify("Anti-Lock Activado")
+        else
+            Notify("Anti-Lock Desactivado")
         end
     end
 end)
