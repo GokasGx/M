@@ -75,7 +75,7 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(message)
         for arg in rest:gmatch("%S+") do
             table.insert(arguments, arg)
         end
-        handleCommand(command, table.unpack(arguments))
+        handleCommand(command, rest:split(" "))
     end
 end)
 
@@ -107,6 +107,18 @@ circle.Radius = settings.Fov
 circle.Transparency = 0
 circle.Visible = settings.Circle
 circle.Filled = false
+
+function string:split(separator)
+    local result = {}
+    local pattern = "(.-)" .. separator .. "()"
+    local lastPos
+    for part, pos in self:gmatch(pattern) do
+        table.insert(result, part)
+        lastPos = pos
+    end
+    table.insert(result, self:sub(lastPos))
+    return result
+end
 
 local function getClosestPlayerToCursor()
     local closestPlayer
