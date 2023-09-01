@@ -12,6 +12,7 @@ local settings = {
     Fov = 100,
     Circle = true,
     valiansh = false,
+    autosavefriends = false,
 }
 
 
@@ -55,12 +56,6 @@ local function handleCommand(command, ...)
                 Title = "Lock Script",
                 Text = "Lock key updated to " .. tostring(newKey),
                 Icon = "rbxassetid://123456789",  
-            })
-        else
-            game.StarterGui:SetCore("SendNotification", {
-                Title = "Lock Script",
-                Text = "Invalid parameter for /lockkey command",
-                Icon = "rbxassetid://987654321",  
             })
         end
     else
